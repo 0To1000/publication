@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet"> 
+    <style>
+      .font-lora {
+        font-family: 'Lora', serif;
+      }
+      .font-nanum {
+        font-family: 'Nanum Gothic', sans-serif;
+      }
+      .article-border {
+        transition: width 0.5s;
+      }
+      .article-card:hover .article-border {
+          width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="flex flex-col md:flex-row justify-between items-center px-8 w-full border-indigo-700 bg-indigo-700 border-2 text-gray-50">
+        <div class="text-4xl italic">0 to 1000</div>
+
+        <ul class="flex ml-12 items-center my-2">
+          <li class="mr-6">
+            <a class="border-b-2 border-text-50 text-text-50 font-bold text-xl hover:text-indigo-200" href="#">Active</a>
+          </li>
+          <li class="mr-6">
+            <a class="text-text-50 font-bold text-xl hover:text-indigo-200" href="#">Link</a>
+          </li>
+          <li class="mr-6">
+            <a class="text-text-50 font-bold text-xl hover:text-indigo-200" href="#">Link</a>
+          </li>
+          <li class="mr-6">
+            <a class="text-gray-400 font-bold text-xl cursor-not-allowed" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="border-l-2 border-indigo-700">
+        &nbsp;
+      </div>
+
+      <div class="flex border-2 border-indigo-700 sm:w-full md:w-3/5 lg:w-4/12 bg-white">
+        <div class="flex-1 border-r-2 border-indigo-700 h-full flex flex-col">
+          <div style="line-height: 37.5px;" class="flex-1 border-b-2 border-indigo-700 text-center text-indigo-700 font-bold px-2">
+            <span class="text-gray-400 border-r-2 pr-2">Prev</span>
+            <span class="text-gray-400 pl-1">Next</span>
+          </div>
+          <div style="line-height: 37.5px;" class="flex-1 text-center text-indigo-700 font-bold px-2">5 of 5</div>
+        </div>
+        <div style="line-height: 75px;" class="flex-1 h-full text-center text-indigo-700 font-bold px-2 text-4xl vertical-center">Ideas</div>
+      </div>
+    </header>
+
+    <div class="container mt-24 lg:grid gap-16 xl:gap-24 grid-cols-3 mx-auto mt-5 mb-16 font-nanum bg-gray-100">
+      <div class="article-card px-4 lg:px-0 mb-12 lg:mb-0">
+        <img class="h-72 w-full object-cover" src="https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1301&q=80" alt="Card Image">
+        <div class="h-2 bg-indigo-700 w-2/5 article-border"></div>
+
+        <div class="my-4"><h3 class="text-lg text-gray-700 uppercase border-b-2 border-gray-900 inline px-1">Julian Nadeau</h3></div>
+        <h2 class="text-3xl mb-6 text-gray-700 font-lora">This is an article title</h2>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      </div>
+
+      <div class="article-card px-4 lg:px-0 mb-12 lg:mb-0 col-span-2">
+        <img class="h-72 w-full object-cover" src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=80" alt="Card Image">
+        <div class="h-2 bg-indigo-700 w-2/5 article-border"></div>
+
+        <div class="my-4"><h3 class="text-lg text-gray-700 uppercase border-b-2 border-gray-900 inline px-1">Julian Nadeau</h3></div>
+        <h2 class="text-3xl mb-6 text-gray-700 font-lora">This is an article title</h2>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      </div>
+
+      <hr class="col-span-3">
+
+      <div class="article-card px-4 lg:px-0 mb-12 lg:mb-0 col-span-3 flex flex-col md:flex-row">
+        <img class="h-144 w-full object-cover" src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80" alt="Card Image">
+        <div class="pl-0 md:pl-16">
+          <div class="h-2 bg-indigo-700 w-2/5 article-border"></div>
+          <div class="my-4"><h3 class="text-lg lg:text-2xl text-gray-700 uppercase border-b-2 border-gray-900 inline px-1">Julian Nadeau</h3></div>
+          <h2 class="text-3xl lg:text-6xl mb-6 text-gray-700">This is an article title</h2>
+          <p class="lg:text-xl text-gray-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+        </div>
+      </div>
+
+      <hr class="col-span-3">
+
+      <div class="article-card px-4 lg:px-0 mb-12 lg:mb-0 lg:col-span-2">
+        <img class="h-72 w-full object-cover" src="https://images.unsplash.com/photo-1504507926084-34cf0b939964?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHJhbmRvbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="Card Image">
+        <div class="h-2 bg-indigo-700 w-2/5 article-border"></div>
+
+        <div class="my-4"><h3 class="text-lg text-gray-700 uppercase border-b-2 border-gray-900 inline px-1">Julian Nadeau</h3></div>
+        <h2 class="text-3xl mb-6 text-gray-700 font-lora">This is an article title</h2>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      </div>
+
+      <div class="article-card px-4 lg:px-0 mb-12 lg:mb-0">
+        <img class="h-72 w-full object-cover" src="https://images.unsplash.com/photo-1542978709-19c95dc3bc7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1867&q=80" alt="Card Image">
+        <div class="h-2 bg-indigo-700 w-2/5 article-border"></div>
+
+        <div class="my-4"><h3 class="text-lg text-gray-700 uppercase border-b-2 border-gray-900 inline px-1">Julian Nadeau</h3></div>
+        <h2 class="text-3xl mb-6 text-gray-700 font-lora">This is an article title</h2>
+        <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+      </div>
+    </div>
+  </body>
+</html>
